@@ -67,7 +67,6 @@ source 'https://rails-assets.org' do
 end
 
 gem 'simple_form'
-
 gem "font-awesome-rails"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
