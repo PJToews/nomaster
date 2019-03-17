@@ -18,6 +18,10 @@ def show
   @place = Place.find(params[:id])
 end
 
+def edit
+  @place = Place.find(params[:id])
+  end
+
   private
 
   def place_params
