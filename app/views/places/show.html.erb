@@ -133,6 +133,7 @@
 
 <div class="col-10 offset-1">
   <h1 class="float-left">Photos</h1>
+  <div class="clear"></div>
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#myModalA">
     Add a photo
@@ -142,10 +143,19 @@
 <div class="clear"></div>
 
 
-<% @place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url class: 'place-photo' %>
-  <%= photo.caption %>
-<% end %>
+<div class="row">
+    <% @place.photos.each do |photo| %>
+      <div class="col-12 col-sm-6">
+        <%= image_tag photo.picture.url class: 'place-photo' %>
+        <%= photo.caption %>
+      </div>
+    <% end %>
+  </div>
+
+
+ 
+
+
 
 
 
