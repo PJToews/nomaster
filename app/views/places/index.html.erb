@@ -10,10 +10,10 @@
 
   <!-- place -> photos and display it -->
   <% if place.photos.present? %>
-  <div class="col-12 place-photo">
+  <div class="col-12">
 
       <% place.photos.each do |photo| %>
-  <%= image_tag photo.picture.url, class: 'place-photo' %>
+  <%= image_tag photo.picture.url, class: 'col-md-4' %>
   <%= photo.caption %>
 <% end %>
 </div>

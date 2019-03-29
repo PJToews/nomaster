@@ -131,6 +131,7 @@
 </div>
 
 
+
 <div class="col-10 offset-1">
   <h1 class="float-left">Photos</h1>
   <div class="clear"></div>
@@ -140,17 +141,23 @@
   </button>
 </div>
 
+
 <div class="clear"></div>
+<br />
 
 
 <div class="row">
     <% @place.photos.each do |photo| %>
-      <div class="col-12 col-sm-6">
-        <%= image_tag photo.picture.url class: 'place-photo' %>
+        <%= image_tag photo.picture.url, class: 'col-md-4 img-fluid' %>
         <%= photo.caption %>
-      </div>
     <% end %>
   </div>
+
+
+ 
+
+
+  
 
 
  
