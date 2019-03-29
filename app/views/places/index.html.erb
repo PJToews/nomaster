@@ -8,6 +8,20 @@
   <smaill><%= place.user.email %></smaill>
   <% end %>
 
+  <!-- place -> photos and display it -->
+  <% if place.photos.present? %>
+  <div class="col-12 place-photo">
+
+      <% place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url, class: 'place-photo' %>
+  <%= photo.caption %>
+<% end %>
+</div>
+    <% end %>
+
+
+
+
   <% if place.comments.present? %>
   <div class="col-12">
       <blockquote>
